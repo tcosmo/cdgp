@@ -17,7 +17,7 @@
 ### Documentation
 - `cd docs`
 - `make html` produces the html doc in folder `build/`
-- The result is in `build/html/index.html`
+- The result is in `docs/build/html/index.html`
 
 If you want to run doc tests:
 - `make doctest` runs all documentation tests
