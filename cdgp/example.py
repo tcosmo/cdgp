@@ -2,7 +2,14 @@
 """
 
 def square(x: int) -> int:
-  """ This function squares numbers.
+  """ This function squares numbers. You can use it like that: 
+  :code:`square(5)`.
+
+    Args:
+        `x` (int): number to square
+
+    Returns:
+        int: squared number
 
     :Example:
         >>> square(3)
