@@ -18,3 +18,6 @@
 - `cd docs`
 - `make html` produces the html doc in folder `build/`
 - `make doctest` runs all documentation tests
+
+## Test
+- `python -m unittest -q tests.example_tests`
