@@ -19,5 +19,5 @@
 - `make html` produces the html doc in folder `build/`
 - `make doctest` runs all documentation tests
 
-## Test
+### Tests
 - `python -m unittest -q tests.example_tests`
