@@ -17,7 +17,12 @@
 ### Documentation
 - `cd docs`
 - `make html` produces the html doc in folder `build/`
+- The result is in `build/html/index.html`
+
+If you want to run doc tests:
 - `make doctest` runs all documentation tests
+
+
 
 ### Tests
 - `python -m unittest -q tests.example_tests`
