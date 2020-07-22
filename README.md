@@ -20,6 +20,7 @@
 - The result is in `docs/build/html/index.html`
 
 If you want to run doc tests:
+- `cd docs`
 - `make doctest` runs all documentation tests
 
 
