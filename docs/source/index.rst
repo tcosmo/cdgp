@@ -3,9 +3,14 @@ Welcome to cdgp's documentation!
 
 Welcome to `CDGP <https://github.com/tcosmo/cdgp>`_.
 
-cdgp.example
+cdgp.chordiagrapoly
 ===============================
-.. automodule:: cdgp.example
+.. automodule:: cdgp.chordiagrapoly
+    :members:
+
+cdgp.quadarithmetic
+===============================
+.. automodule:: cdgp.quadarithmetic
     :members:
 
 .. toctree::

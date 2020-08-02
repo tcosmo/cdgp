@@ -28,7 +28,7 @@ import cypari
 
 ## ###### Classes, choix des structures de données, et conversions ######
 
-class ChorDiag():
+class ChorDiag(object):
     """
     :code: ChorDiag(['a', 'b', 'c', 'd', 'b', 'a', 'd', 'c'],
                     orientations = [1,0,1,0,1,0,1,0],
@@ -38,9 +38,10 @@ class ChorDiag():
         'orientations' (list of bool) : list of orientations first vector second vector
         'signs'` (list of bool) : list of signs 
     """
+    pass
 
-class Graph:
-    
+class Graph(object):
+    pass
 
 ## ###### FROM LYNDON WORDS TO CHORD DIAGRAMS ######
 
@@ -57,10 +58,10 @@ on parcoure la courbe paramétréé,
 arrivée au point de départ on a notre diagramme de cordes
 """
 
-def chordiag_of_lyndon(word : str) -> list of list:
-
-
+def chordiag_of_lyndon(word : str) -> "ChorDiag":
 ## ###### FROM CHORD DIAGRAMS TO INTERLACE GRAPHS ######
+    pass
+
 
 """
 FONCTION 3 : Du diagramme de cordes au graphe d'enlacement
@@ -73,7 +74,7 @@ deux lettre sont reliées par une arête lorsqu'elles s'enlacent cycliquemenet
 par exemple ..a...b...b...a.. ne s'enlacent pas mais ..a...b...a...b.. s'enlacent
 """
 
-def gradma_of_chordiag(chordiag : list of str) -> np.matrix of bool :
+def gradma_of_chordiag(chordiag : List[str]) -> np.matrix:
 
     """
     Returns the interlace graph of an oriented (signed or not) chord diagram
@@ -94,25 +95,23 @@ def gradma_of_chordiag(chordiag : list of str) -> np.matrix of bool :
         >>> gradma_of_chordiag(Chordiag())
         'Graph()'
     """
+    pass
 
-def chordiag_genus(chordiag : list of str) -> int:
+def chordiag_genus(chordiag : List[str]) -> int:
     adj_mod_2 = gradma_of_chordiag(chordiag)%2 # adjacency matrix mod 2
     rank = np.rank(adj_mod_2)
     return rank
 
-def chordiag_is_gauss(chordiag : list of str) -> bool:
+def chordiag_is_gauss(chordiag : List[str]) -> bool:
+    ## ###### CUNNINGHAM GRAPH LABELED TREE FACTORISATION OF GRAPHS ######
 
+    """
+    FONCTION 4 : Décomposition de Cunningham du graphes
 
+    ENTREE : un graphe
+    SORTIE : un arbre de graphes "premiers"
+    PROCEDE : c'est un algo pénible avec des "split", 
+    il faudrait se servir d'un truc déjà implémenté
 
-
-## ###### CUNNINGHAM GRAPH LABELED TREE FACTORISATION OF GRAPHS ######
-
-"""
-FONCTION 4 : Décomposition de Cunningham du graphes
-
-ENTREE : un graphe
-SORTIE : un arbre de graphes "premiers"
-PROCEDE : c'est un algo pénible avec des "split", 
-il faudrait se servir d'un truc déjà implémenté
-
-"""
+    """
+    pass

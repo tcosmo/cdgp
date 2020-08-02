@@ -12,7 +12,7 @@
 
 ### ### LIBRARIES ### ###
 
-from typing import List, Callable 
+from typing import List, Callable, Tuple 
 from math import gcd
 from functools import reduce
 import numpy as np
@@ -37,7 +37,7 @@ import matplotlib.pyplot as plt
 """
 
 
-def list_of_circular_shifts(word : str) -> list of str:
+def list_of_circular_shifts(word : str) -> List[str]:
 
     """
     Returns the list of circular shifts of a string :
@@ -60,8 +60,7 @@ def list_of_circular_shifts(word : str) -> list of str:
     return ["".join([word[i - j] for i in range(n)]) for j in range(n)]
 
 
-def lyndon_of_word(word : str, *comp=min : Callable[List[str],str]) -> str:
-
+def lyndon_of_word(word : str, comp: Callable[[List[str]],str] = min ) -> str:
     """
     Returns the Lyndon representative among set of circular shifts, 
     that is the minimum for th lexicographic order 'L'<'R'
@@ -70,8 +69,6 @@ def lyndon_of_word(word : str, *comp=min : Callable[List[str],str]) -> str:
 
     Args:
         `word` (str): a word (supposedly binary L&R)
-
-    *Args:
         `comp` ( Callable[List[str],str] ): comparision function  min or max
 
     Returns:
@@ -123,7 +120,7 @@ def compress(word : str ) -> str :
     return compress[:-1]
 
 
-def matrix_of_word(word : str) -> :
+def matrix_of_word(word : str) -> np.array:
     
     """
     Returns the SL_2(Z) matrix corresponding to a given 'L'/'R' address.
@@ -151,7 +148,7 @@ def matrix_of_word(word : str) -> :
     return prod
  
 
- def bqf_of_word(word : str) -> tuple of int :
+def bqf_of_word(word : str) -> Tuple[int]:
     
     """
     Returns the triple l,m,r) representing the quadratic form 'lx^2+m*x*y*y^2'
@@ -180,7 +177,7 @@ def matrix_of_word(word : str) -> :
 # A paritr de là c'est du chantier
 
 def word_of_bfq(l,m,r):
-        """
+    """
     Returns the SL_2(Z) matrix corresponding to a given 'L'/'R' address.
     It works like this :
     - firsts choose the Lyndon rpresentative of word
@@ -220,7 +217,7 @@ et je pense qu'on peut trouver une manière de courcirctuier le dessin
 et déduire le diagramme de cordes à partir du mot de Lyndon : il faut que je réfléchisse ! 
 """
 
-def loop_of_lyndon(word : str) -> ???:
+def loop_of_lyndon(word : str) -> None:
     """
     FONCTION 1 : Du mot à la Courbe
     ENTREE : un mot en L et R, du genre LLLRRLRLLRLLRR
@@ -229,7 +226,7 @@ def loop_of_lyndon(word : str) -> ???:
     ou bien à une suite de segments avec des virages à gauche ou à droite)
     PROCEDE : il faudrait que je te détaille à l'oral comment construire le chemin
     """
-
+    pass
 
 ## ######################## RADMACHER AND LINKING ######################## ##
 
